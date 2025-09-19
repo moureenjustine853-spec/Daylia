@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloomly Pro 🌸</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>🌸 Bloomly Pro</h2>
+    <nav>
+      <ul>
+        <li onclick="showSection('dashboard')">Dashboard</li>
+        <li onclick="showSection('notes')">Notes</li>
+        <li onclick="showSection('tasks')">Tasks</li>
+        <li onclick="showSection('habits')">Habits</li>
+        <li onclick="showSection('hydration')">Hydration</li>
+        <li onclick="showSection('affirmations')">Affirmations</li>
+        <li onclick="showSection('challenges')">Challenges</li>
+      </ul>
+    </nav>
+    <button id="toggleTheme">Toggle Dark/Light Mode</button>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <!-- Dashboard -->
+    <section id="dashboard" class="section active">
+      <h2>Dashboard</h2>
+      <p>Overview of all your tasks, notes, habits, and challenges 🌸</p>
+    </section>
+
+    <!-- Notes -->
+    <section id="notes" class="section">
+      <h2>Notes</h2>
+      <textarea id="noteInput" placeholder="Write your notes here..."></textarea>
+      <button onclick="saveNote()">Save Note</button>
+      <div id="notesList"></div>
+    </section>
+
+    <!-- Tasks -->
+    <section id="tasks" class="section">
+      <h2>Tasks</h2>
+      <input type="text" id="taskInput" placeholder="New task...">
+      <button onclick="addTask()">Add Task</button>
+      <ul id="taskList"></ul>
+    </section>
+
+    <!-- Habits -->
+    <section id="habits" class="section">
+      <h2>Habits</h2>
+      <input type="text" id="habitInput" placeholder="New habit...">
+      <button onclick="addHabit()">Add Habit</button>
+      <ul id="habitList"></ul>
+    </section>
+
+    <!-- Hydration -->
+    <section id="hydration" class="section">
+      <h2>Hydration Tracker</h2>
+      <p>Glasses of water today: <span id="waterCount">0</span></p>
+      <button onclick="drinkWater()">+1 Glass</button>
+    </section>
+
+    <!-- Affirmations -->
+    <section id="affirmations" class="section">
+      <h2>Daily Affirmation</h2>
+      <p id="affirmation">Click below for positivity</p>
+      <button onclick="newAffirmation()">New Affirmation</button>
+    </section>
+
+    <!-- Challenges -->
+    <section id="challenges" class="section">
+      <h2>30-Day Challenges</h2>
+      <input type="text" id="challengeInput" placeholder="New challenge...">
+      <button onclick="addChallenge()">Add Challenge</button>
+      <ul id="challengeList"></ul>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
